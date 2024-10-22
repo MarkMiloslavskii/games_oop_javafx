@@ -60,7 +60,7 @@ public class LogicTest {
         ImpossibleMoveException exception = assertThrows(
                 ImpossibleMoveException.class,
                 () -> new BishopBlack(Cell.E4).way(Cell.B6));
-        assertThat(exception.getMessage()).isEqualTo("could not move by diagonal from E4 to B6");
+        assertThat(exception.getMessage()).isEqualTo("Could not move by diagonal from E4 to B6");
     }
 
     @Test
@@ -73,7 +73,7 @@ public class LogicTest {
         OccupiedCellException exception = assertThrows(
                 OccupiedCellException.class,
                 () -> logic.move(Cell.G7, Cell.C3));
-        assertThat(exception.getMessage()).isEqualTo("There is a figure on the way!");
+        assertThat(exception.getMessage()).isEqualTo("There is a figure on the way");
     }
 
     public void whenBishopHasNotOnTheBoard() {
